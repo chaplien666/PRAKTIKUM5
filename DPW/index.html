@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css2.css" rel="stylesheet">
+
+    <title>BILLING ADDRESS</title>
+  </head>
+
+  <body style="background-color :#000;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: ##141f1f;">
+      <a class="navbar-brand" href="#">
+     <img src="alien.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" style="color: #00e600;" href="#">Chaplien</a>
+        <a class="nav-item nav-link" href="#formtugas">Billing Address</a>
+      </div>
+    </div>
+  </nav>
+
+    <div id="result"></div>
+    <h3 align="center" style="padding-top: 20px;"><strong style="color: #00e600;">Alien Billing Address</strong></h3><br>
+    	<form class="needs-validation container" style="padding: 0 120px 0 120px;" id="formtugas" name="formtugas" action="filetujuan.php" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstname" style="color: #60e600;">First name</label>
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value="" >
+                <div class="invalid-feedback">
+                  Valid first name is .
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastname" style="color: #60e600;">Last name</label>
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="lastname" value="" >
+                <div class="invalid-feedback">
+                  Valid last name is .
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username" style="color: #60e600;">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control"  name="username" id="username" placeholder="Username" >
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is .
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" style="color: #60e600;">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email"  name="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address" style="color: #60e600;">Address</label>
+              <input type="text"  name="address" class="form-control" id="address" placeholder="1234 Main St" >
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2" style="color: #60e600;">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment or suite">
+            </div>
+
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="same-address">
+              <label class="custom-control-label" for="same-address" style="color: #60e600;">Shipping address is the same as my billing address</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info">
+              <label class="custom-control-label" for="save-info" style="color: #60e600;">Save this information for next time</label>
+            </div>
+            <hr class="mb-4">
+
+            <h4 class="mb-3" style="color: #60e600;">Payment</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" >
+                <label class="custom-control-label" for="credit" style="color: #60e600;">Credit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" >
+                <label class="custom-control-label" for="debit" style="color: #60e600;">Debit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" >
+                <label class="custom-control-label" for="paypal" style="color: #60e600;">PayPal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name" style="color: #60e600;">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" name="Name_Card" placeholder="Name on Card" >
+                <small class="text-muted" style="color: #60e600;">Full name as displayed on card</small>
+                <div class="invalid-feedback" style="color: #60e600;">
+                  Name on card is
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number" style="color: #60e600;">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" name="Credit_Number" placeholder="Credit Number" >
+                <div class="invalid-feedback" style="color: #60e600;">
+                  Credit card number is
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration" style="color: #60e600;">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" name="Expiration" placeholder="Expiration" >
+                <div class="invalid-feedback" style="color: #60e600;">
+                  Expiration date
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv" style="color: #60e600;">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" name="CVV" placeholder="CVV" >
+                <div class="invalid-feedback" style="color: #60e600;">
+                  Security code
+                </div>
+              </div>
+              <div class="col-sm-6 text-center align-self-center">
+                  <h6 style="color: #60e600;">Result</h6>
+                  <div id="signup_result">
+                      <div class="alert">&nbsp;</div>
+                  </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button id="create" name="action" value="create" class="btn btn-dark btn-lg"  style="color: #60e600;" type="submit">Input</button>
+            <button id="read" name="action" value="read" class="btn btn-dark btn-lg"  style="color: #60e600;" type="submit">Read</button>
+			<button id="update" name="action" value="update" class="btn btn-dark btn-lg"  style="color: #60e600;" type="submit">Update</button>
+			<button id="delete" name="action" value="delete" class="btn btn-dark btn-lg"  style="color: #60e600;" type="submit">Delete</button>
+          </form>
+          <footer>
+            <hr>
+            <p style="color :#60e600;">Copyright! &copy; - Muhammad Rafli Salam.  AREA 51</p>
+          </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      //$(".tresult").dataTable();
+      $("#formtugas").submit(tangani);
+      function tangani(e){
+			//$("#result").text(strformencoded);
+			var dataaction = $("#formtugas").find("button[type=submit]:focus").attr("id");
+      var strformencoded = $("#formtugas").serialize();
+      var arrayform = $("#formtugas").serializeArray();
+			console.log(arrayform);
+			$.post("filetujuan.php",{action : dataaction ,dataform : strformencoded}, function(output){
+				alert(output);
+			//$("#formtugas").submit(tangani);
+      $("#result").html(output);
+			});
+			return false;
+	   }
+    </script>
+  </body>
+</html>
